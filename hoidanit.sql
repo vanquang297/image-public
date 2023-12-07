@@ -3,11 +3,10 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2023 at 02:58 AM
+-- Generation Time: Dec 07, 2023 at 03:10 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -35,7 +34,7 @@ CREATE TABLE `allcodes` (
   `valueVi` varchar(255) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ;
 
 --
 -- Dumping data for table `allcodes`
@@ -81,7 +80,7 @@ CREATE TABLE `bookings` (
   `timeType` varchar(255) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ;
 
 -- --------------------------------------------------------
 
@@ -97,7 +96,7 @@ CREATE TABLE `clinics` (
   `image` varchar(255) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ;
 
 -- --------------------------------------------------------
 
@@ -112,7 +111,7 @@ CREATE TABLE `doctor_clinic_specialty` (
   `specialtyId` int(11) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ;
 
 -- --------------------------------------------------------
 
@@ -128,7 +127,7 @@ CREATE TABLE `histories` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   `files` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ;
 
 -- --------------------------------------------------------
 
@@ -146,7 +145,7 @@ CREATE TABLE `markdowns` (
   `clinicId` int(11) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ;
 
 --
 -- Dumping data for table `markdowns`
@@ -171,7 +170,7 @@ CREATE TABLE `schedules` (
   `doctorId` int(11) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ;
 
 --
 -- Dumping data for table `schedules`
@@ -190,7 +189,7 @@ INSERT INTO `schedules` (`id`, `currentNumber`, `maxNumber`, `date`, `timeType`,
 
 CREATE TABLE `sequelizemeta` (
   `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ;
 
 --
 -- Dumping data for table `sequelizemeta`
@@ -221,7 +220,7 @@ CREATE TABLE `specialties` (
   `name` varchar(255) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ;
 
 -- --------------------------------------------------------
 
@@ -243,7 +242,7 @@ CREATE TABLE `users` (
   `positionId` varchar(255) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ;
 
 --
 -- Dumping data for table `users`
@@ -338,7 +337,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `allcodes`
 --
 ALTER TABLE `allcodes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `bookings`
@@ -368,13 +367,13 @@ ALTER TABLE `histories`
 -- AUTO_INCREMENT for table `markdowns`
 --
 ALTER TABLE `markdowns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `schedules`
 --
 ALTER TABLE `schedules`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `specialties`
@@ -386,7 +385,7 @@ ALTER TABLE `specialties`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
